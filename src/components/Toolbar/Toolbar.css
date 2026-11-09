@@ -1,0 +1,56 @@
+.markdown-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: var(--space-1) var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--bg-secondary);
+  flex-shrink: 0;
+}
+
+.toolbar-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 18px;
+  background-color: var(--border-subtle);
+  margin: 0 var(--space-1);
+}
+
+.toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 6px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.toolbar-btn:hover:not(:disabled) {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .markdown-toolbar {
+    padding: var(--space-1) var(--space-2);
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .toolbar-btn {
+    min-width: 34px;
+    height: 34px;
+  }
+}
+

@@ -1,0 +1,103 @@
+.note-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-3) var(--space-3);
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  background-color: transparent;
+  text-align: left;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.note-card:hover {
+  background-color: var(--bg-hover);
+}
+
+.note-card.is-selected {
+  background-color: var(--color-accent-subtle);
+  border-color: var(--color-accent-border);
+}
+
+.note-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.note-card-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}
+
+.note-card.is-selected .note-card-title {
+  color: var(--color-accent);
+}
+
+.note-card-favorite {
+  color: var(--color-warning);
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.note-card-preview {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  line-height: var(--line-height-normal);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.note-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: 2px;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.note-card-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note-card-category-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.note-card-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
